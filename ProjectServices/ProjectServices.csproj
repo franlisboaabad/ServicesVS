@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DE32F5B-74E1-4E90-9B69-8AD93DD8A201}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectServices</RootNamespace>
+    <AssemblyName>ProjectServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.12\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\clsAdminCategoria.cs" />
+    <Compile Include="Administrador\clsAdminCliente.cs" />
+    <Compile Include="Administrador\clsAdminMovimiento.cs" />
+    <Compile Include="Administrador\clsAdminOS.cs" />
+    <Compile Include="Administrador\clsAdminProducto.cs" />
+    <Compile Include="Administrador\clsAdminProveedor.cs" />
+    <Compile Include="Administrador\clsAdminServicio.cs" />
+    <Compile Include="Administrador\clsAdminTipousser.cs" />
+    <Compile Include="Administrador\clsAdminUsuario.cs" />
+    <Compile Include="Entidades\clsCliente.cs" />
+    <Compile Include="Entidades\clsMovimiento.cs" />
+    <Compile Include="Entidades\clsOrdenservicio.cs" />
+    <Compile Include="Entidades\clsProducto.cs" />
+    <Compile Include="Entidades\clsProveedor.cs" />
+    <Compile Include="Entidades\clsServicio.cs" />
+    <Compile Include="Entidades\clsUsuario.cs" />
+    <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\IMovimiento.cs" />
+    <Compile Include="Interfaces\IOrdenS.cs" />
+    <Compile Include="Interfaces\IProducto.cs" />
+    <Compile Include="Interfaces\IProveedor.cs" />
+    <Compile Include="Interfaces\IServicio.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="InterMysql\MysqlMovimiento.cs" />
+    <Compile Include="InterMysql\MysqlCliente.cs" />
+    <Compile Include="InterMysql\MysqlOS.cs" />
+    <Compile Include="InterMysql\MysqlProducto.cs" />
+    <Compile Include="InterMysql\MysqlProveedor.cs" />
+    <Compile Include="InterMysql\MysqlServicio.cs" />
+    <Compile Include="InterMysql\MysqlUsuario.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Movimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Movimiento.Designer.cs">
+      <DependentUpon>Movimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormTecnico.Designer.cs">
+      <DependentUpon>FormTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\clsError.cs" />
+    <Compile Include="Class\clsOcultarIconos.cs" />
+    <Compile Include="Class\clsValidacion.cs" />
+    <Compile Include="Conexion\clsConexion.cs" />
+    <Compile Include="Entidades\clsCategoria.cs" />
+    <Compile Include="Entidades\clsTipo_usser.cs" />
+    <Compile Include="Interfaces\ICategoria.cs" />
+    <Compile Include="Interfaces\ITipo_usser.cs" />
+    <Compile Include="InterMysql\MysqlCategoria.cs" />
+    <Compile Include="InterMysql\MysqlTipo_usser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Configuracion.Designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Menuprincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Menuprincipal.Designer.cs">
+      <DependentUpon>Menuprincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Servicio.Designer.cs">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Listas\Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Movimiento.resx">
+      <DependentUpon>Movimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormTecnico.resx">
+      <DependentUpon>FormTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Menuprincipal.resx">
+      <DependentUpon>Menuprincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Servicio.resx">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart - Google Docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrashPlan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc - Google Docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google Sketchup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet Download Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mac iCal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power - Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Accounts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows Mobility Center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wordpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I80W1Q0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acceder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almacen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clienteprovedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brindarservice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagos.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
