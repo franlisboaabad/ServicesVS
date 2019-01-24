@@ -8,17 +8,22 @@ namespace ProjectServices.Entidades
 {
     public class clsOrdenservicio
     {
-        public Int32 iId_OS;
-        public Int32 iId_cliente;
-        public Int32 iId_tecnico;
-        public String sEstadoservicio;
-        public DateTime dFechainicial;
-        public DateTime dFechafinal;
-        public String sGarantia;
-        public String sDescripcionProducto;
-        public String sObservaciones;
-        public String sDiagnostico;
-        public Boolean bEstado;
+        private Int32 iId_OS;
+        private Int32 iId_cliente;
+        private Int32 iId_tecnico;
+        private String sEstadoservicio;
+        private DateTime dFechainicial;
+        private DateTime dFechafinal;
+        private String sGarantia;
+        private String sDescripcionProducto;
+        private String sObservaciones;
+        private String sDiagnostico;
+        private Decimal dImporte_total;
+        private String sTipo_pago;
+        private Decimal dPago;
+        private Decimal dVuelto;
+        private Decimal dSaldo;
+        private Boolean bEstado;
 
         public int Id_OS
         {
@@ -147,6 +152,71 @@ namespace ProjectServices.Entidades
             set
             {
                 sDiagnostico = value;
+            }
+        }
+
+        public decimal Importe_total
+        {
+            get
+            {
+                return dImporte_total;
+            }
+
+            set
+            {
+                dImporte_total = value;
+            }
+        }
+
+        public string Tipo_pago
+        {
+            get
+            {
+                return sTipo_pago;
+            }
+
+            set
+            {
+                sTipo_pago = value;
+            }
+        }
+
+        public decimal Pago
+        {
+            get
+            {
+                return dPago;
+            }
+
+            set
+            {
+                dPago = value;
+            }
+        }
+
+        public decimal Vuelto
+        {
+            get
+            {
+                return dVuelto;
+            }
+
+            set
+            {
+                dVuelto = value;
+            }
+        }
+
+        public decimal Saldo
+        {
+            get
+            {
+                return dSaldo;
+            }
+
+            set
+            {
+                dSaldo = value;
             }
         }
 

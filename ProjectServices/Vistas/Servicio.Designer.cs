@@ -197,7 +197,7 @@
             this.btnnuevo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevo.Image = global::ProjectServices.Properties.Resources.Nuevo;
             this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnuevo.Location = new System.Drawing.Point(20, 535);
+            this.btnnuevo.Location = new System.Drawing.Point(24, 535);
             this.btnnuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(147, 55);
@@ -288,6 +288,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(772, 703);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);

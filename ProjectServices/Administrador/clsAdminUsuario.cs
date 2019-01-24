@@ -76,5 +76,33 @@ namespace ProjectServices.Administrador
         }
 
 
+        //LoginAdministrador
+        public Boolean LoginAdministrador(clsUsuario Usuario)
+        {
+            try
+            {
+                return iTrabajador.LoginAdministrador(Usuario);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se encontro el siguiente problema : " + ex.Message, " ADVERTENCIA ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+        }
+
+        public clsUsuario Validar_Usuario(string u,string c)
+        {
+            try
+            {
+                return iTrabajador.Validar_Usuario(u,c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se encontro el siguiente problema : " + ex.Message, " ADVERTENCIA ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+        }
+
+
     }
 }

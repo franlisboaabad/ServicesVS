@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectServices.Entidades
 {
-    class clsProveedor
+    public class clsProveedor
     {
         private Int32 iCodproveedor;
         private String sRuc;

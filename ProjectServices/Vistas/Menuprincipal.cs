@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using ProjectServices.Entidades;
+using ProjectServices.Vistas.Listas;
+using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectServices.Vistas
@@ -14,15 +10,18 @@ namespace ProjectServices.Vistas
     public partial class Menuprincipal : MetroFramework.Forms.MetroForm
     {
         private int childFormNumber = 0;
+        clsUsuario Usser;
         
 
-        public Menuprincipal()
+        public Menuprincipal(clsUsuario Usuario)
         {
             InitializeComponent();
             ChangeColor();
-            toolhora.Text = DateTime.Now.ToString("G");
-
+            Usser = Usuario;
+            this.Width = 1400; this.Height = 700;
+            
             Ini();
+           
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -39,14 +38,12 @@ namespace ProjectServices.Vistas
             {
                 Listas.Estadisticas e = new Listas.Estadisticas();
                 e.MdiParent = this;
-
+                e.label4.Text = Usser.Usuario;
+                e.label3.Text = Usser.Id_Trabajador.ToString();
                 e.Show();
             }
-            catch (Exception)
-            {
-
-              
-            }
+            catch (Exception) { }
+            
         }
 
         private void OpenFile(object sender, EventArgs e)
@@ -172,7 +169,7 @@ namespace ProjectServices.Vistas
             }
             else
             {
-                Servicios form = new Servicios();
+                Servicios form = new Servicios(Usser);
                 form.MdiParent = this;
                 form.Show();
             }
@@ -245,33 +242,22 @@ namespace ProjectServices.Vistas
 
         private void ChangeColor()
         {
-
             try
             {
                 MdiClient ctlMDI;
 
-                foreach (Control ctl in this.Controls)
+                foreach (Control control in this.Controls)
                 {
-                    try
+                    if (control is MdiClient)
                     {
-                        ctlMDI = (MdiClient)ctl;
+                        ctlMDI = (MdiClient)control;
                         //Color c = Color.LightSeaGreen;
                         Color c = Color.LightBlue;
                         ctlMDI.BackColor = c;
                     }
-                    catch (Exception)
-                    {
-
-                        
-                    }
                 }
             }
-            catch (Exception)
-            {
-
-                
-            }
-
+            catch (Exception) { }
 
         }
 
@@ -297,7 +283,59 @@ namespace ProjectServices.Vistas
             }
             else
             {
-                Ventas form = new Ventas();
+                Ventas form = new Ventas(Usser);
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void Menuprincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           Application.Exit();
+        }
+
+        private void Menuprincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+         //   Application.Exit();
+        }
+
+        private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["Compras"] != null)
+            {
+                Application.OpenForms["Compras"].Activate();
+            }
+            else
+            {
+                Compras form = new Compras(Usser);
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void todasMisOrdenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FormListaordenes"] != null)
+            {
+                Application.OpenForms["FormListaordenes"].Activate();
+            }
+            else
+            {
+                FormListaordenes form = new FormListaordenes();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void ordenesPendientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FormListaordenes_pendientes"] != null)
+            {
+                Application.OpenForms["FormListaordenes_pendientes"].Activate();
+            }
+            else
+            {
+                FormListaordenes_pendientes form = new FormListaordenes_pendientes();
                 form.MdiParent = this;
                 form.Show();
             }

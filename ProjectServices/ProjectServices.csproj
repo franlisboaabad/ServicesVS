@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,6 +81,11 @@
   <ItemGroup>
     <Compile Include="Administrador\clsAdminCategoria.cs" />
     <Compile Include="Administrador\clsAdminCliente.cs" />
+    <Compile Include="Administrador\clsAdminCompra.cs" />
+    <Compile Include="Administrador\clsAdmindetallecompra.cs" />
+    <Compile Include="Administrador\clsAdmindetalleventa.cs" />
+    <Compile Include="Administrador\clsAdminDetalle_os_producto.cs" />
+    <Compile Include="Administrador\clsAdminDetalle_os_servicio.cs" />
     <Compile Include="Administrador\clsAdminMovimiento.cs" />
     <Compile Include="Administrador\clsAdminOS.cs" />
     <Compile Include="Administrador\clsAdminProducto.cs" />
@@ -73,20 +93,37 @@
     <Compile Include="Administrador\clsAdminServicio.cs" />
     <Compile Include="Administrador\clsAdminTipousser.cs" />
     <Compile Include="Administrador\clsAdminUsuario.cs" />
+    <Compile Include="Administrador\clsAdminVenta.cs" />
     <Compile Include="Entidades\clsCliente.cs" />
+    <Compile Include="Entidades\clsCompra.cs" />
+    <Compile Include="Entidades\clsDetallecompra.cs" />
+    <Compile Include="Entidades\clsDetalleventa.cs" />
+    <Compile Include="Entidades\clsDetalle_dos_producto.cs" />
+    <Compile Include="Entidades\clsDetalle_dos_servicio.cs" />
     <Compile Include="Entidades\clsMovimiento.cs" />
     <Compile Include="Entidades\clsOrdenservicio.cs" />
     <Compile Include="Entidades\clsProducto.cs" />
     <Compile Include="Entidades\clsProveedor.cs" />
     <Compile Include="Entidades\clsServicio.cs" />
     <Compile Include="Entidades\clsUsuario.cs" />
+    <Compile Include="Entidades\clsVenta.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\ICompra.cs" />
+    <Compile Include="Interfaces\IDetallecompra.cs" />
+    <Compile Include="Interfaces\IDetalleventa.cs" />
+    <Compile Include="Interfaces\IDetalle_os_producto.cs" />
+    <Compile Include="Interfaces\IDetalle_os_servicio.cs" />
     <Compile Include="Interfaces\IMovimiento.cs" />
     <Compile Include="Interfaces\IOrdenS.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
     <Compile Include="Interfaces\IServicio.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="Interfaces\IVenta.cs" />
+    <Compile Include="InterMysql\MysqlCompra.cs" />
+    <Compile Include="InterMysql\MysqlDetallecompra.cs" />
+    <Compile Include="InterMysql\MysqlDetalleventa.cs" />
+    <Compile Include="InterMysql\MysqlDetalle_os_producto.cs" />
     <Compile Include="InterMysql\MysqlMovimiento.cs" />
     <Compile Include="InterMysql\MysqlCliente.cs" />
     <Compile Include="InterMysql\MysqlOS.cs" />
@@ -94,16 +131,72 @@
     <Compile Include="InterMysql\MysqlProveedor.cs" />
     <Compile Include="InterMysql\MysqlServicio.cs" />
     <Compile Include="InterMysql\MysqlUsuario.cs" />
+    <Compile Include="InterMysql\MysqlVenta.cs" />
+    <Compile Include="InterMysql\Mysql_Detalle_os_servicio.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Listas\Estadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Listas\Estadisticas.Designer.cs">
       <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormListaordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormListaordenes.Designer.cs">
+      <DependentUpon>FormListaordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormListaordenes_pendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormListaordenes_pendientes.Designer.cs">
+      <DependentUpon>FormListaordenes_pendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormProducto.Designer.cs">
+      <DependentUpon>FormProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormProveedor.Designer.cs">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FormServicios.Designer.cs">
+      <DependentUpon>FormServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\MPagocompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\MPagocompra.Designer.cs">
+      <DependentUpon>MPagocompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\MPagoservicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\MPagoservicio.Designer.cs">
+      <DependentUpon>MPagoservicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\MPagoventa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\MPagoventa.Designer.cs">
+      <DependentUpon>MPagoventa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Movimiento.cs">
       <SubType>Form</SubType>
@@ -201,8 +294,35 @@
     <Compile Include="Vistas\Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\Estadisticas.resx">
       <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormListaordenes.resx">
+      <DependentUpon>FormListaordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormListaordenes_pendientes.resx">
+      <DependentUpon>FormListaordenes_pendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormProducto.resx">
+      <DependentUpon>FormProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormProveedor.resx">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FormServicios.resx">
+      <DependentUpon>FormServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\MPagocompra.resx">
+      <DependentUpon>MPagocompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\MPagoservicio.resx">
+      <DependentUpon>MPagoservicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\MPagoventa.resx">
+      <DependentUpon>MPagoventa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Movimiento.resx">
       <DependentUpon>Movimiento.cs</DependentUpon>
@@ -425,6 +545,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

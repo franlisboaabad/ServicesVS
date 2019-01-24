@@ -64,5 +64,7 @@ namespace ProjectServices.Entidades
                 bEstado = value;
             }
         }
+
+        
     }
 }

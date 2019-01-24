@@ -315,7 +315,7 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(751, 338);
+            this.btnSeleccionar.Location = new System.Drawing.Point(733, 338);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(147, 55);
@@ -377,7 +377,7 @@
             // pictureproducto
             // 
             this.pictureproducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureproducto.Image = global::ProjectServices.Properties.Resources.Calculator;
+            this.pictureproducto.Image = global::ProjectServices.Properties.Resources.Magnifier;
             this.pictureproducto.Location = new System.Drawing.Point(664, 44);
             this.pictureproducto.Margin = new System.Windows.Forms.Padding(4);
             this.pictureproducto.Name = "pictureproducto";
@@ -422,6 +422,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1045, 690);

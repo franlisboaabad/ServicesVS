@@ -90,6 +90,7 @@ namespace ProjectServices.Vistas.Listas
                     cCliente.Apellidos = dataclientes.CurrentRow.Cells[2].Value.ToString();
                     cCliente.Documento = dataclientes.CurrentRow.Cells[5].Value.ToString();
                     cCliente.Direccion = dataclientes.CurrentRow.Cells[6].Value.ToString();
+                    cCliente.Celular = dataclientes.CurrentRow.Cells[7].Value.ToString();
                     this.Close();
                 }
             }

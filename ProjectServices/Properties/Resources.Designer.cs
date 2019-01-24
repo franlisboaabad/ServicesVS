@@ -83,6 +83,16 @@ namespace ProjectServices.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add1 {
+            get {
+                object obj = ResourceManager.GetObject("add1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ajustes {
             get {
                 object obj = ResourceManager.GetObject("ajustes", resourceCulture);
@@ -136,6 +146,26 @@ namespace ProjectServices.Properties {
         internal static System.Drawing.Bitmap Calculator {
             get {
                 object obj = ResourceManager.GetObject("Calculator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash {
+            get {
+                object obj = ResourceManager.GetObject("cash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash1 {
+            get {
+                object obj = ResourceManager.GetObject("cash1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +343,16 @@ namespace ProjectServices.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap facebook {
+            get {
+                object obj = ResourceManager.GetObject("facebook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Google_Calendar {
             get {
                 object obj = ResourceManager.GetObject("Google Calendar", resourceCulture);
@@ -356,6 +396,16 @@ namespace ProjectServices.Properties {
         internal static System.Drawing.Bitmap imprimir {
             get {
                 object obj = ResourceManager.GetObject("imprimir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instagram {
+            get {
+                object obj = ResourceManager.GetObject("instagram", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +596,16 @@ namespace ProjectServices.Properties {
         internal static System.Drawing.Bitmap servicio {
             get {
                 object obj = ResourceManager.GetObject("servicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap twitter {
+            get {
+                object obj = ResourceManager.GetObject("twitter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -159,5 +159,73 @@ namespace ProjectServices.InterMysql
             finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
         }
 
+
+        /* LoginAdministrador */
+        public bool LoginAdministrador(clsUsuario Usuario)
+        {
+
+            try
+            {
+                con.conectarBD();
+                clsUsuario Usser = new clsUsuario();
+                cmd = new MySqlCommand("LoginAdministrador", con.conector);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("usser", Usuario.Usuario);
+                cmd.Parameters.AddWithValue("contraseña", Usuario.Clave);
+                cmd.CommandTimeout = 200;
+                int x = Convert.ToInt32(cmd.ExecuteScalar());
+                if (x != 0)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
+
+            }
+
+            catch (MySqlException ex) { throw ex; }
+
+            finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
+        }
+
+        /*Validar usuario*/
+        public clsUsuario Validar_Usuario(string u,string c)
+        {
+            try
+            {
+                clsUsuario Usser = new clsUsuario();
+                con.conectarBD();
+                cmd = new MySqlCommand("LoginAdministrador", con.conector);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandTimeout = 200;
+                cmd.Parameters.AddWithValue("usser",u);
+                cmd.Parameters.AddWithValue("contraseña", c);
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Usser.Id_Trabajador = dr.GetInt32(0);
+                        Usser.Usuario = dr.GetString(1);
+                        Usser.Clave = dr.GetString(2);
+                        Usser.Estado = dr.GetBoolean(3);
+                      
+                    }
+
+                }
+
+                return Usser;
+
+            }
+
+            catch (MySqlException ex) { throw ex; }
+
+            finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
+        }
+
+
+
     }
 }

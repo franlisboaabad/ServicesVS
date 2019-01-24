@@ -15,5 +15,10 @@ namespace ProjectServices.Interfaces
         Boolean Update(clsUsuario update);//Update
         Boolean Delete(clsUsuario delete);//Delete
         DataTable lista_Usuario();//lista Trabajador Usuario
+
+        Boolean LoginAdministrador(clsUsuario Usuario);//Buscar Trabajador
+
+        clsUsuario Validar_Usuario(string u,string c);//Validar Usuario
+
     }
 }

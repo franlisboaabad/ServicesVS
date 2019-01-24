@@ -75,7 +75,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(16, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1147, 661);
@@ -111,9 +111,9 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1139, 626);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento";
@@ -121,7 +121,7 @@
             // textcontraseña
             // 
             this.textcontraseña.Location = new System.Drawing.Point(733, 346);
-            this.textcontraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textcontraseña.Margin = new System.Windows.Forms.Padding(4);
             this.textcontraseña.Multiline = true;
             this.textcontraseña.Name = "textcontraseña";
             this.textcontraseña.Size = new System.Drawing.Size(295, 36);
@@ -130,7 +130,7 @@
             // textusuario
             // 
             this.textusuario.Location = new System.Drawing.Point(231, 346);
-            this.textusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textusuario.Margin = new System.Windows.Forms.Padding(4);
             this.textusuario.Multiline = true;
             this.textusuario.Name = "textusuario";
             this.textusuario.Size = new System.Drawing.Size(295, 36);
@@ -139,7 +139,7 @@
             // textemail
             // 
             this.textemail.Location = new System.Drawing.Point(733, 279);
-            this.textemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textemail.Margin = new System.Windows.Forms.Padding(4);
             this.textemail.Multiline = true;
             this.textemail.Name = "textemail";
             this.textemail.Size = new System.Drawing.Size(295, 36);
@@ -148,7 +148,7 @@
             // textcelular
             // 
             this.textcelular.Location = new System.Drawing.Point(231, 279);
-            this.textcelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textcelular.Margin = new System.Windows.Forms.Padding(4);
             this.textcelular.Multiline = true;
             this.textcelular.Name = "textcelular";
             this.textcelular.Size = new System.Drawing.Size(295, 36);
@@ -160,7 +160,7 @@
             this.btnupdate.Image = global::ProjectServices.Properties.Resources.Editar;
             this.btnupdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.Location = new System.Drawing.Point(569, 506);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(147, 55);
             this.btnupdate.TabIndex = 13;
@@ -175,7 +175,7 @@
             this.btncancel.Image = global::ProjectServices.Properties.Resources.X;
             this.btncancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncancel.Location = new System.Drawing.Point(724, 506);
-            this.btncancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncancel.Margin = new System.Windows.Forms.Padding(4);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(160, 55);
             this.btncancel.TabIndex = 14;
@@ -190,7 +190,7 @@
             this.btnsave.Image = global::ProjectServices.Properties.Resources.Guardar;
             this.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsave.Location = new System.Drawing.Point(401, 506);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(160, 55);
             this.btnsave.TabIndex = 12;
@@ -205,7 +205,7 @@
             this.btnnuevo.Image = global::ProjectServices.Properties.Resources.Nuevo;
             this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnnuevo.Location = new System.Drawing.Point(184, 506);
-            this.btnnuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnnuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(147, 55);
             this.btnnuevo.TabIndex = 11;
@@ -263,7 +263,7 @@
             this.combosexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combosexo.FormattingEnabled = true;
             this.combosexo.Location = new System.Drawing.Point(733, 154);
-            this.combosexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combosexo.Margin = new System.Windows.Forms.Padding(4);
             this.combosexo.Name = "combosexo";
             this.combosexo.Size = new System.Drawing.Size(295, 30);
             this.combosexo.TabIndex = 4;
@@ -271,7 +271,7 @@
             // dtpfecha
             // 
             this.dtpfecha.Location = new System.Drawing.Point(231, 154);
-            this.dtpfecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpfecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(294, 30);
             this.dtpfecha.TabIndex = 3;
@@ -279,7 +279,7 @@
             // textdireccion
             // 
             this.textdireccion.Location = new System.Drawing.Point(733, 217);
-            this.textdireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textdireccion.Margin = new System.Windows.Forms.Padding(4);
             this.textdireccion.Multiline = true;
             this.textdireccion.Name = "textdireccion";
             this.textdireccion.Size = new System.Drawing.Size(295, 36);
@@ -288,7 +288,7 @@
             // textdocumento
             // 
             this.textdocumento.Location = new System.Drawing.Point(231, 217);
-            this.textdocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textdocumento.Margin = new System.Windows.Forms.Padding(4);
             this.textdocumento.Multiline = true;
             this.textdocumento.Name = "textdocumento";
             this.textdocumento.Size = new System.Drawing.Size(295, 36);
@@ -341,7 +341,7 @@
             // textapellidos
             // 
             this.textapellidos.Location = new System.Drawing.Point(733, 89);
-            this.textapellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textapellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textapellidos.Multiline = true;
             this.textapellidos.Name = "textapellidos";
             this.textapellidos.Size = new System.Drawing.Size(295, 36);
@@ -350,7 +350,7 @@
             // textnombres
             // 
             this.textnombres.Location = new System.Drawing.Point(231, 89);
-            this.textnombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textnombres.Margin = new System.Windows.Forms.Padding(4);
             this.textnombres.Multiline = true;
             this.textnombres.Name = "textnombres";
             this.textnombres.Size = new System.Drawing.Size(295, 36);
@@ -388,9 +388,9 @@
             this.tabPage2.Controls.Add(this.dataUsuarios);
             this.tabPage2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1139, 626);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Listado";
@@ -399,7 +399,7 @@
             // textcodigo
             // 
             this.textcodigo.Location = new System.Drawing.Point(1, 0);
-            this.textcodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textcodigo.Margin = new System.Windows.Forms.Padding(4);
             this.textcodigo.Name = "textcodigo";
             this.textcodigo.Size = new System.Drawing.Size(36, 30);
             this.textcodigo.TabIndex = 10;
@@ -411,7 +411,7 @@
             this.chekeliminar.Image = global::ProjectServices.Properties.Resources.Eliminar;
             this.chekeliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chekeliminar.Location = new System.Drawing.Point(793, 7);
-            this.chekeliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chekeliminar.Margin = new System.Windows.Forms.Padding(4);
             this.chekeliminar.Name = "chekeliminar";
             this.chekeliminar.Size = new System.Drawing.Size(160, 53);
             this.chekeliminar.TabIndex = 9;
@@ -422,7 +422,7 @@
             // textbuscar
             // 
             this.textbuscar.Location = new System.Drawing.Point(222, 16);
-            this.textbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbuscar.Margin = new System.Windows.Forms.Padding(4);
             this.textbuscar.Multiline = true;
             this.textbuscar.Name = "textbuscar";
             this.textbuscar.Size = new System.Drawing.Size(453, 36);
@@ -445,7 +445,7 @@
             this.dataUsuarios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataUsuarios.Location = new System.Drawing.Point(8, 68);
-            this.dataUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dataUsuarios.Name = "dataUsuarios";
             this.dataUsuarios.ReadOnly = true;
             this.dataUsuarios.Size = new System.Drawing.Size(1120, 545);
@@ -461,10 +461,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1179, 690);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuarios";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

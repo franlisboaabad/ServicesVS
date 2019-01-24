@@ -30,7 +30,7 @@ namespace ProjectServices.Vistas
         }
 
 
-        /*listar clientes*/
+        /*listar servicio*/
         private void ListarServicio()
         {
             try

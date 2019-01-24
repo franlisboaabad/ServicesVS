@@ -1,21 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Configuration;
-using System.Windows.Forms;
 using ProjectServices.Class;
-
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using System.Net;
-using System.Configuration;
-using System.Globalization;
-using System.IO;
-using System.Windows.Forms;
 
 namespace ProjectServices.Conexion
 {

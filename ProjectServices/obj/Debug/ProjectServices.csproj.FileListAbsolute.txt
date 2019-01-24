@@ -35,10 +35,6 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServi
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\bin\Debug\MetroFramework.Design.dll
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\bin\Debug\MetroFramework.dll
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\bin\Debug\Google.Protobuf.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\bin\Debug\DevComponents.DotNetBar2.xml
-C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\bin\Debug\MySql.Data.xml
-C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Movimiento.resources
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormCliente.resources
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormTecnico.resources
@@ -56,3 +52,13 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServi
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.Estadisticas.resources
 C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Ventas.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Compras.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormProducto.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormServicios.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.MPagoservicio.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.MPagoventa.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.MPagocompra.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormProveedor.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormListaordenes.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\ProjectServices\ProjectServices\obj\Debug\ProjectServices.Vistas.Listas.FormListaordenes_pendientes.resources

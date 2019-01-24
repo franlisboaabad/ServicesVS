@@ -24,12 +24,13 @@ namespace ProjectServices.Vistas.Listas
         public FormTecnico()
         {
             InitializeComponent();
+            ListarTecnicos();
+            datatecnicos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
         }
 
         private void FormTecnico_Load(object sender, EventArgs e)
         {
-            ListarTecnicos();
-            datatecnicos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+           
         }
 
         private void ListarTecnicos()

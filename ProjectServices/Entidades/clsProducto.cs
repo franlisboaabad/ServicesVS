@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectServices.Entidades
 {
-    class clsProducto
+    public class clsProducto
     {
         private Int32 iCodproducto;
         private String sNombre;
@@ -18,6 +18,11 @@ namespace ProjectServices.Entidades
         private Double dPrecioventa;
         private Boolean bEstado;
         public byte[] bImagen;
+
+        //Formproducto -- Add
+        private Int32 iCantidad;
+        private Double iSubtotal;
+
         public byte[] Imagen { get { return bImagen; } set { bImagen = value; } }
 
 
@@ -135,6 +140,32 @@ namespace ProjectServices.Entidades
             set
             {
                 bEstado = value;
+            }
+        }
+
+        public int Cantidad
+        {
+            get
+            {
+                return iCantidad;
+            }
+
+            set
+            {
+                iCantidad = value;
+            }
+        }
+
+        public double Subtotal
+        {
+            get
+            {
+                return iSubtotal;
+            }
+
+            set
+            {
+                iSubtotal = value;
             }
         }
     }

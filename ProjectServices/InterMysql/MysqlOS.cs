@@ -39,9 +39,13 @@ namespace ProjectServices.InterMysql
                 cmd.Parameters.AddWithValue("garantia", insert.Garantia);
                 cmd.Parameters.AddWithValue("descripcionproducto", insert.DescripcionProducto);
                 cmd.Parameters.AddWithValue("observaciones", insert.Observaciones);
-                cmd.Parameters.AddWithValue("diagnosticotecnico", insert.Diagnostico);
-                cmd.Parameters.AddWithValue("estado", insert.Estado);
-
+                cmd.Parameters.AddWithValue("diagnostico", insert.Diagnostico);
+                cmd.Parameters.AddWithValue("importe_total", insert.Importe_total);
+                cmd.Parameters.AddWithValue("tipopago", insert.Tipo_pago);
+                cmd.Parameters.AddWithValue("pago", insert.Pago);
+                cmd.Parameters.AddWithValue("vuelto", insert.Vuelto);
+                cmd.Parameters.AddWithValue("saldo", insert.Saldo);
+                
                 parmetro = cmd.Parameters.AddWithValue("newid", 0);
                 parmetro.Direction = ParameterDirection.Output;
 
@@ -65,5 +69,105 @@ namespace ProjectServices.InterMysql
 
             finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
         }
+
+        /*Buscar orden de servicio por nombre o apellidos */
+        public DataTable Lista_ordenservicio(string nombre,string apellidos)
+        {
+            try
+            {
+                tabla = new DataTable();
+                con.conectarBD();
+                cmd = new MySqlCommand("Buscarordenservicio", con.conector);
+                cmd.Parameters.AddWithValue("nombre", nombre);
+                cmd.Parameters.AddWithValue("apellidos",apellidos);
+                cmd.CommandType = CommandType.StoredProcedure;
+                adap = new MySqlDataAdapter(cmd);
+                adap.Fill(tabla);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
+        }
+
+
+        /*Listar mis ordenes de servicio */
+        public DataTable Listar_ordenservicio()
+        {
+            try
+            {
+                tabla = new DataTable();
+                con.conectarBD();
+                cmd = new MySqlCommand("Listar_ordenservicio", con.conector);
+                
+                cmd.CommandType = CommandType.StoredProcedure;
+                adap = new MySqlDataAdapter(cmd);
+                adap.Fill(tabla);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
+        }
+
+        /*Listar mis ordenes de servicio pendientes*/
+        public DataTable Listar_ordenes_pendientes()
+        {
+            try
+            {
+                tabla = new DataTable();
+                con.conectarBD();
+                cmd = new MySqlCommand("Listar_ordenes_pendientes", con.conector);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                adap = new MySqlDataAdapter(cmd);
+                adap.Fill(tabla);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
+        }
+
+
+        //Anular  OS
+        public bool Anular_ordenservicio(int codigo)
+        {
+
+            try
+            {
+                con.conectarBD();
+
+                cmd = new MySqlCommand("Anular_ordenservicio", con.conector);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("codigo", codigo);
+                int resultado = cmd.ExecuteNonQuery();
+
+                if (resultado != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+
+            catch (MySqlException ex) { throw ex; }
+
+            finally { con.conector.Dispose(); cmd.Dispose(); con.desconectarBD(); }
+        }
+
     }
 }

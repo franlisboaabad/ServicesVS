@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectServices.Entidades
 {
-    class clsServicio
+    public class clsServicio
     {
         private Int32 iCodigoServicio;
         private String sServicio;
@@ -14,7 +14,7 @@ namespace ProjectServices.Entidades
         private String sDescripcion;
         private Boolean bEstado;
 
-
+        
         public int CodigoServicio
         {
             get

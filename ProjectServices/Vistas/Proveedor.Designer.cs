@@ -339,6 +339,7 @@
             // 
             this.dataproveedor.AllowUserToAddRows = false;
             this.dataproveedor.AllowUserToDeleteRows = false;
+            this.dataproveedor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataproveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataproveedor.Location = new System.Drawing.Point(8, 86);
             this.dataproveedor.Margin = new System.Windows.Forms.Padding(4);
@@ -357,6 +358,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1112, 566);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);

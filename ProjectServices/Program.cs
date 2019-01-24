@@ -16,7 +16,7 @@ namespace ProjectServices
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas.Menuprincipal());
+            Application.Run(new Vistas.Listas.FormListaordenes_pendientes());
         }
     }
 }
